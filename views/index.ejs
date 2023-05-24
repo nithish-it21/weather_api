@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <style>
+        /* Reset browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set background color */
+body {
+  background-image: url("https://free4kwallpapers.com/uploads/originals/2015/07/16/nice-beach-suning-weather-hd-wallapaper.jpg");
+}
+
+/* Center container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Style form */
+fieldset {
+  border: none;
+  padding: 20px;
+  background-color: transparent;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 70%;
+  font-size: 16px;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Style placeholder text */
+.ghost-input::-webkit-input-placeholder {
+  color: #aaa;
+}
+
+.ghost-input:-moz-placeholder {
+  color: #aaa;
+}
+
+.ghost-input::-moz-placeholder {
+  color: #aaa;
+}
+
+.ghost-input:-ms-input-placeholder {
+  color: #aaa;
+}
+
+/* Style error message */
+p {
+    background-color: transparent;
+  color: rgb(255, 255, 255);
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <fieldset>
+            <form action="/" method="post">
+                <input type="text" name="city" placeholder="Enter The City Name" class="ghost-input">
+                <input type="submit" class="ghost-button" value="Get weather">
+            </form>
+            <%if(weather !==null ){%>
+
+                <p>
+                    <%=weather%>
+                </p>
+
+                <%}%>
+
+                    <%if(error !==null){%>
+                        <p>
+                            <%=error%>
+                        </p>
+                        <%}%>
+        </fieldset>
+    </div>
+</body>
+
+</html>

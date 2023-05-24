@@ -1,0 +1,71 @@
+/* Reset browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set background color */
+body {
+  background-color: #f2f2f2;
+}
+
+/* Center container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Style form */
+fieldset {
+  border: none;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 70%;
+  font-size: 16px;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Style placeholder text */
+.ghost-input::-webkit-input-placeholder {
+  color: #aaa;
+}
+
+.ghost-input:-moz-placeholder {
+  color: #aaa;
+}
+
+.ghost-input::-moz-placeholder {
+  color: #aaa;
+}
+
+.ghost-input:-ms-input-placeholder {
+  color: #aaa;
+}
+
+/* Style error message */
+p {
+  color: red;
+  margin-top: 10px;
+  font-size: 16px;
+}
